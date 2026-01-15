@@ -3,8 +3,8 @@ import Location from "@/app/_blocks/Location";
 import Photo from "@/app/_blocks/Photo";
 import { useState, useEffect } from "react";
 import type { MonthData } from "@/app/_data/MonthData";
-import { Menu } from "lucide-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { motion } from 'motion/react';
 
 export default function Month({ ...props }: MonthData) {
   const [isModalActive, setIsModalActive] = useState<boolean>(false);
@@ -29,27 +29,34 @@ export default function Month({ ...props }: MonthData) {
 
   return (
     <>
-      <section id="top" className="w-full h-screen text-white relative">
-        <SidebarTrigger className='absolute top-3 right-3 z-10 bg-white rounded-full px-3 py-2 text-black flex gap-3 items-center'></SidebarTrigger>
-        <div className="relative flex max-md:flex-col max-md:justify-end justify-between max-md:items-start items-end w-full h-full overflow-hidden">
-          <img
-            className="absolute top-0 w-full h-full object-cover object-center"
-            src={props.images[0].src}
-          />
-          <div className="z-10  max-md:p-8 p-16 w-full flex max-md:flex-col-reverse justify-between max-md:items-start items-end max-md:gap-8">
-            <div className=" max-w-175 w-full z-10">
-              <div className='w-full'>
-                <span className="lowercase">{props.quote}</span>
-                <h1 className="font-(--font-poppins) font-bold uppercase max-md:text-6xl text-8xl">{props.month}</h1>
-                <p>{props.description}</p>
+      <section id="top" className='w-full h-screen text-white relative'>
+        <SidebarTrigger className='absolute top-2 right-2 z-10 bg-[#141414] rounded-full px-3 py-2 text-black flex gap-3 items-center lg:hidden'></SidebarTrigger>
+        <div className="p-8 flex max-md:flex-col justify-between max-md:items-start items-end w-full lg:h-full overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            className='flex items-end relative rounded-lg overflow-hidden w-full aspect-square lg:h-full shadow-[10px_15px_10px_rgba(0,0,0,.5)]'>
+            <img
+              className="absolute top-0 w-full h-full object-cover object-center"
+              src={props.heroImage}
+            />
+            <div className="z-10 max-md:p-8 p-16 w-full flex max-md:flex-col-reverse justify-between max-md:items-start items-end max-md:gap-8">
+              <div className=" max-w-175 w-full z-10">
+                <div className='w-full'>
+                  <span className="lowercase">{props.quote}</span>
+                  <h1 className="font-permanent-marker uppercase max-md:text-6xl text-8xl text-indigo-400">{props.month}</h1>
+                  <p>{props.description}</p>
+                </div>
               </div>
+              <Location location={props.location} />
             </div>
-            <Location location={props.location} />
-          </div>
+            {<div className="w-full bg-linear-to-t from-black via-black/70 to-transparent absolute bottom-0 left-0 h-50 lg:h-125"></div>}
+          </motion.div>
         </div>
-
-        <div className='flex flex-col gap-8 max-md:pt-15 lg:items-center justify-center py-8 px-8 fading-grid bg-[url("https://framerusercontent.com/images/ZHsBzYWho4sJwqYp73X2pcgFKrc.png?width=208&height=208")]'>
+        <div className='flex flex-col gap-8 max-md:pt-15 lg:items-center justify-center py-8 px-8 fading-grid relative'>
           <div className="flex flex-col max-md:gap-24 gap-32 max-w-250 w-full relative">
+
             <div className="hidden max-md:flex flex-row-reverse gap-4 absolute top-[-40] right-0 text-black">
               <span className="font-patrick-hand text-[20px]">Click Me!</span>
               <svg
@@ -84,9 +91,8 @@ export default function Month({ ...props }: MonthData) {
               <a href="https://github.com/brendonianl/rwrld">Here</a>
             </small>
           </div>
-        </div>
 
-        <div className="w-full bg-linear-to-t from-black via-black/70 to-transparent absolute bottom-0 left-0 h-125"></div>
+        </div>
       </section>
       {isModalActive && (
         <div

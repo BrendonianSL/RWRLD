@@ -6,7 +6,7 @@
 @theme {
   --font-patrick-hand: var(--font-patrick-hand);
   --font-outfit: var(--font-outfit);
-  --font-poppins: var(--font-poppins);
+  --font-permanent-marker: var(--font-permanent-marker);
 }
 
 
@@ -122,9 +122,9 @@
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
+
 h2 {
   font-size: 32px;
-  font-family: var(--font-poppins);
   font-weight: 700;
 }
 

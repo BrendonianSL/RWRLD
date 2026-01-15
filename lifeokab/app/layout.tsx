@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins, Outfit, Patrick_Hand_SC } from "next/font/google";
+import { Permanent_Marker, Outfit, Patrick_Hand_SC } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const permanent_marker = Permanent_Marker({
+  variable: "--font-permanent-marker",
   subsets: ["latin"],
-  weight: ["400", "600", "700"], // choose what you need
+  weight: "400",
 });
 
 const outfit = Outfit({
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${poppins.variable} ${patrick_hand.variable} antialiased relative`}
+        className={`${outfit.variable} ${permanent_marker.variable} ${patrick_hand.variable} antialiased relative bg-[url("https://framerusercontent.com/images/ZHsBzYWho4sJwqYp73X2pcgFKrc.png?width=208&height=208")]`}
       >
         <SidebarProvider>
           <AppSidebar />

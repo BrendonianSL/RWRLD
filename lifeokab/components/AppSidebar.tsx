@@ -1,6 +1,6 @@
 'use client';
 
-import { Calendar, Camera, Home, Inbox, Search, Settings, Code } from "lucide-react"
+import { Snowflake, Heart, Leaf, CloudRain, Flower, Sun, Star, SunDim, Book, Moon, Coffee, Gift, Camera, Code } from "lucide-react"
 import { useMonthStore } from "@/app/_store/MonthStore";
 
 import {
@@ -21,62 +21,62 @@ const items = [
   {
     title: "January",
     url: "#january",
-    icon: Home,
+    icon: Snowflake,
   },
   {
     title: "Februrary",
     url: "#february",
-    icon: Home,
+    icon: Heart,
   },
   {
     title: "March",
     url: "#march",
-    icon: Home,
+    icon: Leaf,
   },
   {
     title: "April",
     url: "#april",
-    icon: Home,
+    icon: CloudRain,
   },
   {
     title: "May",
     url: "#may",
-    icon: Home,
+    icon: Flower,
   },
   {
     title: "June",
     url: "#june",
-    icon: Home,
+    icon: Sun,
   },
   {
     title: "July",
     url: "#july",
-    icon: Home,
+    icon: Star,
   },
   {
     title: "August",
     url: "#august",
-    icon: Home,
+    icon: SunDim,
   },
   {
     title: "September",
     url: "#september",
-    icon: Home,
+    icon: Book,
   },
   {
     title: "October",
     url: "#october",
-    icon: Home,
+    icon: Moon,
   },
   {
     title: "November",
     url: "#november",
-    icon: Home,
+    icon: Coffee,
   },
   {
     title: "December",
     url: "#december",
-    icon: Home,
+    icon: Gift,
   },
 ] satisfies {
   title: Months
@@ -106,7 +106,10 @@ export function AppSidebar() {
   return (
     <Sidebar className="">
       <SidebarHeader>
-        RWRLD
+        <svg width="100" height="50" viewBox="0 0 232 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.98387 47.36H-0.000128746L7.48787 -1.52588e-05H25.0879C29.7812 -1.52588e-05 33.5145 1.23732 36.2879 3.71198C39.0612 6.18665 40.4479 9.51465 40.4479 13.696C40.4479 16.8533 39.5519 19.712 37.7599 22.272C36.0105 24.832 33.4719 26.9013 30.1439 28.48L35.9679 47.36H25.6639L20.6079 30.656H12.6079L9.98387 47.36ZM16.0639 8.95998L14.0159 21.824H21.7599C24.3199 21.824 26.3252 21.184 27.7759 19.904C29.2692 18.5813 30.0159 16.7893 30.0159 14.528C30.0159 12.7787 29.4399 11.4133 28.2879 10.432C27.1359 9.45065 25.5359 8.95998 23.4879 8.95998H16.0639Z" fill="#BB337E" />
+          <path d="M51.8559 47.36L45.4559 -1.52588e-05H55.3759L58.1279 21.184C58.6825 25.408 58.9599 28.8 58.9599 31.36C59.8985 28.3733 61.1999 24.9813 62.8639 21.184L72.0159 -1.52588e-05H83.4719L85.7759 21.184C86.0745 23.744 86.2879 27.136 86.4159 31.36C87.3972 28.5013 88.7412 25.152 90.4479 21.312L100.112 -1.52588e-05H110.48L88.8479 47.36H79.1839L75.7279 14.656L61.8399 47.36H51.8559ZM118.796 47.36H108.812L116.3 -1.52588e-05H133.9C138.594 -1.52588e-05 142.327 1.23732 145.1 3.71198C147.874 6.18665 149.26 9.51465 149.26 13.696C149.26 16.8533 148.364 19.712 146.572 22.272C144.823 24.832 142.284 26.9013 138.956 28.48L144.78 47.36H134.476L129.42 30.656H121.42L118.796 47.36ZM124.876 8.95998L122.828 21.824H130.572C133.132 21.824 135.138 21.184 136.588 19.904C138.082 18.5813 138.828 16.7893 138.828 14.528C138.828 12.7787 138.252 11.4133 137.1 10.432C135.948 9.45065 134.348 8.95998 132.3 8.95998H124.876ZM169.534 -1.52588e-05L163.518 38.016H181.95L180.478 47.36H152.062L159.55 -1.52588e-05H169.534ZM205.11 47.36H187.062L194.55 -1.52588e-05H211.382C217.228 -1.52588e-05 222.07 2.04798 225.91 6.14398C229.75 10.24 231.67 15.4027 231.67 21.632C231.67 29.2267 229.196 35.4133 224.246 40.192C219.34 44.9707 212.961 47.36 205.11 47.36ZM209.526 9.34398H203.062L198.518 38.016H205.622C210.316 38.016 214.049 36.544 216.822 33.6C219.596 30.6133 220.982 26.624 220.982 21.632C220.982 17.92 219.937 14.9547 217.846 12.736C215.756 10.4747 212.982 9.34398 209.526 9.34398Z" fill="#000" />
+        </svg>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup> {/* Monthly Lookbooks */}
@@ -116,9 +119,9 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a onClick={() => changeMonth(item.title)}  href='#top'>
+                    <a onClick={() => changeMonth(item.title)}>
                       <item.icon />
-                      <div className='font-outfit'>{item.title}</div>
+                      <div className='font-outfit font-semibold'>{item.title}</div>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -135,7 +138,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon />
-                      <div className='font-outfit'>{item.title}</div>
+                      <div className='font-outfit font-semibold'>{item.title}</div>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -147,14 +150,14 @@ export function AppSidebar() {
           <SidebarGroupLabel>For The Nerds</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-                <SidebarMenuItem>
-                  <SidebarMenuButton>
-                    <Code />
-                    <a href='https://github.com/brendonianl/lookbook'>
-                      <div className='font-outfit'>Github Repository</div>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton>
+                  <Code />
+                  <a href='https://github.com/brendonianl/lookbook'>
+                    <div className='font-outfit font-semibold'>Github Repository</div>
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
