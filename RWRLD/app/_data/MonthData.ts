@@ -27,11 +27,11 @@ export interface MonthData {
 
 export const monthData: Record<Months, MonthData> = {
   January: {
-    quote: "A quiet beginning sets the tone for the year.",
+    quote: "Starting over isn't always the sign of ending. But beginning.",
     month: "January",
-    description: "For us, January was a time for us to set new goals through our New Year Bingo Cards. But for me in particular, it was a time to get fully aquainted with living in a new state away from family, and learning more about Krista and Alaia.",
-    location: "Original Pancake House",
-    heroImage: '/florida.jpg',
+    description: "January always symbolizes new beginnings. It's a time to wash away mistakes and start anew. We aren't perfect, but we use the opprortunity to start over as a chance to prove ourselves to only each other. Also, I cheated. This photo is not from January but deal with it!",
+    location: "Krista's House",
+    heroImage: '/January-Walking.jpg',
     images: [
       {
         src: "/January-Breakfast.jpg",

@@ -61,7 +61,7 @@ export default function Photo({
             <span className="font-patrick-hand">{`${props.aside.quote}  -${props.aside.person}`}</span>
           </div>
         )}
-        <h2 className="lowercase font-permanent-marker text-indigo-400">{props.heading}</h2>
+        <h2 className="lowercase font-permanent-marker">{props.heading}</h2>
         <p>{props.description}</p>
       </motion.div>
     </div>

@@ -2,6 +2,11 @@
 
 import { Snowflake, Heart, Leaf, CloudRain, Flower, Sun, Star, SunDim, Book, Moon, Coffee, Gift, Camera, Code } from "lucide-react"
 import { useMonthStore } from "@/app/_store/MonthStore";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useSidebar } from "@/components/ui/sidebar";
+import { useState, useEffect } from 'react';
+
+
 
 import {
   Sidebar,
@@ -101,10 +106,21 @@ const socials = [
 
 export function AppSidebar() {
 
+  const { setOpen, isMobile, toggleSidebar } = useSidebar();
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+
+  useEffect(() => {
+    if (!isMobile) {
+      setOpen(true);
+    }
+  }, [isMobile, setOpen]);
+
+
   // Set the button function.
   const changeMonth = useMonthStore((state) => state.setMonth);
   return (
-    <Sidebar className="">
+    <Sidebar className={`${!isMobileDevice}`}>
       <SidebarHeader>
         <svg width="100" height="50" viewBox="0 0 232 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.98387 47.36H-0.000128746L7.48787 -1.52588e-05H25.0879C29.7812 -1.52588e-05 33.5145 1.23732 36.2879 3.71198C39.0612 6.18665 40.4479 9.51465 40.4479 13.696C40.4479 16.8533 39.5519 19.712 37.7599 22.272C36.0105 24.832 33.4719 26.9013 30.1439 28.48L35.9679 47.36H25.6639L20.6079 30.656H12.6079L9.98387 47.36ZM16.0639 8.95998L14.0159 21.824H21.7599C24.3199 21.824 26.3252 21.184 27.7759 19.904C29.2692 18.5813 30.0159 16.7893 30.0159 14.528C30.0159 12.7787 29.4399 11.4133 28.2879 10.432C27.1359 9.45065 25.5359 8.95998 23.4879 8.95998H16.0639Z" fill="#BB337E" />
@@ -118,8 +134,8 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a onClick={() => changeMonth(item.title)}>
+                  <SidebarMenuButton onClick={() => { if (isMobile) toggleSidebar() }} asChild>
+                    <a onClick={() => { changeMonth(item.title) }}>
                       <item.icon />
                       <div className='font-outfit font-semibold'>{item.title}</div>
                     </a>

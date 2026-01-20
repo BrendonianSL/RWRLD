@@ -44,8 +44,8 @@ export default function Month({ ...props }: MonthData) {
             <div className="z-10 max-md:p-8 p-16 w-full flex max-md:flex-col-reverse justify-between max-md:items-start items-end max-md:gap-8">
               <div className=" max-w-175 w-full z-10">
                 <div className='w-full'>
-                  <span className="lowercase">{props.quote}</span>
-                  <h1 className="font-permanent-marker uppercase max-md:text-6xl text-8xl text-indigo-400">{props.month}</h1>
+                  <span className="lowercase text-[20px]">{props.quote}</span>
+                  <h1 className="font-permanent-marker uppercase max-md:text-6xl text-8xl">{props.month}</h1>
                   <p>{props.description}</p>
                 </div>
               </div>
