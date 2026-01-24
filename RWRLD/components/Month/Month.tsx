@@ -31,12 +31,12 @@ export default function Month({ ...props }: MonthData) {
     <>
       <section id="top" className='w-full h-screen text-white relative'>
         <SidebarTrigger className='absolute top-2 right-2 z-10 bg-[#141414] rounded-full px-3 py-2 text-black flex gap-3 items-center lg:hidden'></SidebarTrigger>
-        <div className="p-8 flex max-md:flex-col justify-between max-md:items-start items-end w-full lg:h-full overflow-hidden">
+        <div className="p-8 flex max-md:flex-col justify-between max-md:items-start items-end w-full overflow-hidden h-screen">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-            className='flex items-end relative rounded-lg overflow-hidden w-full aspect-square lg:h-full shadow-[10px_15px_10px_rgba(0,0,0,.5)]'>
+            className='flex items-end relative rounded-lg overflow-hidden w-full aspect-square h-full shadow-[10px_15px_10px_rgba(0,0,0,.5)]'>
             <img
               className="absolute top-0 w-full h-full object-cover object-center"
               src={props.heroImage}
