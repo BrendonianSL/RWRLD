@@ -31,7 +31,7 @@ export default function Month({ ...props }: MonthData) {
     <>
       <section id="top" className='w-full h-screen text-white relative'>
         <SidebarTrigger className='absolute top-2 right-2 z-10 bg-[#141414] rounded-full px-3 py-2 text-black flex gap-3 items-center lg:hidden'></SidebarTrigger>
-        <div className="p-8 flex max-md:flex-col justify-between max-md:items-start items-end w-full overflow-hidden h-screen">
+        <div className="p-4 flex max-md:flex-col justify-between max-md:items-start items-end w-full overflow-hidden h-screen">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -41,12 +41,12 @@ export default function Month({ ...props }: MonthData) {
               className="absolute top-0 w-full h-full object-cover object-center"
               src={props.heroImage}
             />
-            <div className="z-10 max-md:p-8 p-16 w-full flex max-md:flex-col-reverse justify-between max-md:items-start items-end max-md:gap-8">
+            <div className="z-10 max-md:p-6 p-16 w-full flex max-md:flex-col-reverse justify-between max-md:items-start items-end max-md:gap-8">
               <div className=" max-w-175 w-full z-10">
-                <div className='w-full flex flex-col gap-4'>
-                  <span className="lowercase text-[20px]">{props.quote}</span>
+                <div className='w-full flex flex-col gap-2'>
+                  <span className="lowercase max-md:text-[16px] text-[20px]">{props.quote}</span>
                   <h1 className="font-permanent-marker uppercase max-md:text-6xl text-8xl">{props.month}</h1>
-                  <p>{props.description}</p>
+                  <p className='max-md:text-[14px]'>{props.description}</p>
                 </div>
               </div>
               <Location location={props.location} />

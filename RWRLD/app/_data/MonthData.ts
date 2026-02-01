@@ -42,7 +42,7 @@ export const monthData: Record<Months, MonthData> = {
           person: "Krista",
           quote: "It takes one sip to know it's good, but two to realize it's not worth the burn."
         },
-        location: "Original Pancake House"
+        location: "Krista's House"
       },
       {
         src: "/January-Filter.jpg",
@@ -60,7 +60,7 @@ export const monthData: Record<Months, MonthData> = {
         alt: "January placeholder image",
         heading: "Hiding in Plain Sight Pt.2",
         description: "Brendan's eyelashes were already long, but did you know they can get longer?",
-        location: "Washington Square Mall"
+        location: "Krista's House"
       },
       {
         src: "/January-Spiderman.jpg",
@@ -92,7 +92,7 @@ export const monthData: Record<Months, MonthData> = {
           person: "Krista",
           quote: "Love shows up quietly."
         },
-        location: "Downtown Cafe, FL"
+        location: "Krista's House"
       }
     ]
   },
