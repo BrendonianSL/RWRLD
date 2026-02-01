@@ -29,37 +29,37 @@ export const monthData: Record<Months, MonthData> = {
   January: {
     quote: "Starting over isn't always the sign of ending. But beginning.",
     month: "January",
-    description: "January always symbolizes new beginnings. It's a time to wash away mistakes and start anew. We aren't perfect, but we use the opprortunity to start over as a chance to prove ourselves to only each other. Also, I cheated. This photo is not from January but deal with it!",
-    location: "Krista's House",
-    heroImage: '/January-Walking.jpg',
+    description: "January always symbolizes new beginnings. It's a time to wash away mistakes and start anew. We aren't perfect, but we use the opprortunity to be better than we were before.",
+    location: "DIY Bar Portland",
+    heroImage: '/January-Art.jpg',
     images: [
       {
-        src: "/January-Breakfast.jpg",
+        src: "/January-Sprite.png",
         alt: "January placeholder image",
-        heading: "breakfast date!",
-        description: "Original Pancake House is one of my favorite breakfast spots. It was awesome to see how it changes when you visit a different state that has one.",
+        heading: "Mcdonald's Sprite",
+        description: "This image is worth the click for the reaction. Sadly, Alaia wasn't ready for what she was drinking.",
         aside: {
           person: "Krista",
-          quote: "Brendan eats his eggs with syrup. Weirdo."
+          quote: "It takes one sip to know it's good, but two to realize it's not worth the burn."
         },
         location: "Original Pancake House"
       },
       {
-        src: "/January-Golf.png",
+        src: "/January-Filter.jpg",
         alt: "January placeholder image",
-        heading: "Hole in One!",
-        description: "Krista hasn't played golf in her life until this point. She's good for a beginner. (Don't tell her I said that).",
+        heading: "Hiding in Plain Site.",
+        description: "And just when you think you know someone, they do you dirty with a filter like this.",
         aside: {
           person: "Brendan",
-          quote: "No matter what she says, it wasn't even close."
+          quote: "I was really locked in on watching Bridgerton."
         },
-        location: "Glowing Greens Minigolf"
+        location: "Krista's House"
       },
       {
-        src: "/January-Hat.jpg",
+        src: "/January-Fleek.png",
         alt: "January placeholder image",
-        heading: "howdy partner",
-        description: "Alaia flexes her expertise in fashion by taking after Beyonce. She'll grow into it.",
+        heading: "Hiding in Plain Sight Pt.2",
+        description: "Brendan's eyelashes were already long, but did you know they can get longer?",
         location: "Washington Square Mall"
       },
       {
